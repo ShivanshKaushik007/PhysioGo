@@ -13,7 +13,7 @@ function NavLink({ href, children, onClick }) {
   return (
     <Link
       href={href}
-      className={isActive ? "text-blue-600" : ""}
+      className={isActive ? "text-teal-600" : ""}
       onClick={onClick}
     >
       {children}
@@ -34,11 +34,11 @@ export default function Navbar() {
           <img src={logoSrc} className="h-10" alt="PhysioGo Logo" />
         </Link>
 
-        <nav className="hidden md:flex gap-6 items-center">
+        <nav className="hidden md:flex font-bold font-mono gap-6 items-center">
           <NavLink href="/">Home</NavLink>
-          <NavLink href="/book">Book Your Physio</NavLink>
-          <NavLink href="/AiMatcher">Ai Matcher</NavLink>
-          <NavLink href="/FindAPhysio">Find A Physio</NavLink>
+          <NavLink href="/AiMatcher">AI Matcher</NavLink>
+          <NavLink href="/book">Book Physio</NavLink>         
+          <NavLink href="/FindAPhysio">Find Physio</NavLink>
           
 
           <SignedOut>
@@ -84,7 +84,7 @@ export default function Navbar() {
             </NavLink>
             <Link
               href="/book"
-              className="mt-2 px-4 py-2 bg-blue-600 text-white rounded-md"
+              className="mt-2 px-4 py-2 bg-teal-600 text-white rounded-md"
               onClick={() => setOpen(false)}
             >
               Book Now

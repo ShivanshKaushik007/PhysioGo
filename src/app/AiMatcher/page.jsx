@@ -36,7 +36,7 @@ function AIMatcher() {
         {/* Left Card (Form) */}
         <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-200">
           <h2 className="text-2xl font-bold mb-2 text-teal-700">
-            ✨ AI Physio Matcher
+             AI Physio Matcher
           </h2>
           <p className="text-gray-600 mb-6 text-sm">
             Answer a few questions and our AI will recommend the best type of
@@ -100,7 +100,7 @@ function AIMatcher() {
         {/* Right Card (Results) */}
         <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-200">
           <h2 className="text-2xl font-bold mb-2 text-teal-700">
-            📋 AI Recommendation
+             AI Recommendation
           </h2>
 
           {isLoading && (

@@ -1,4 +1,4 @@
-import Link from "next/link"; // Changed: from 'react-router-dom' to 'next/link'
+import Link from "next/link"; 
 import React from "react";
 import { User, Home, Clock, MapPin, Calendar, Check } from "lucide-react";
 
@@ -17,18 +17,14 @@ function ServiceCard({ icon, title, description }) {
 export default function HomePage() {
   return (
     <div className="bg-white">
-      {/* ========================================
- S 
-        Hero Section (Split Layout)
-        ========================================
-      */}
-      <section className="bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 py-20 lg:py-32 grid md:grid-cols-2 gap-12 items-center">
-          {/* Left Column (Text & CTA) */}
+      
+      <section className="bg-gray-50 ">
+        <div className="max-w-7xl mx-auto px-4 pt-20 lg:py-32 grid md:grid-cols-2 gap-12 items-center">
+         
           <div>
             <h1 className="text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6">
-              Professional Physiotherapy at{" "}
-              <span className="text-teal-600">Your Doorstep</span>
+              Clinical Excellence in the Comfort of Your {" "}
+              <span className="text-teal-600">Home.</span>
             </h1>
             <p className="text-xl text-gray-600 mb-10 max-w-lg">
               Book certified physiotherapists who come to your home.
@@ -36,7 +32,7 @@ export default function HomePage() {
             </p>
             <div className="flex space-x-4">
               <Link
-                href="/book" // Changed: 'to' to 'href'
+                href="/book"
                 className="bg-teal-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-teal-700 transition shadow-md hover:shadow-lg"
               >
                 Book Now
@@ -44,9 +40,9 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right Column (Image Placeholder) */}
+        
           <div>
-            <div className="bg-gray-200 h-96 rounded-lg shadow-lg flex items-center justify-center">
+            <div className="bg-gray-200 h-auto rounded-lg shadow-lg flex items-center justify-center">
               {/* Changed: Image path */}
               <img src="/hero.png" alt="Physiotherapy at home" />
             </div>
@@ -54,10 +50,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ========================================
-        Services / "Why Choose Us" Section
-        ========================================
-      */}
+     
       <section className="bg-white py-24">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
@@ -151,10 +144,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ========================================
-        NEW: Final Call to Action (CTA) Section
-        ========================================
-      */}
+     
       <section className="bg-white py-24">
         <div className="text-center max-w-3xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -165,7 +155,7 @@ export default function HomePage() {
             you feel your best.
           </p>
           <Link
-            href="/book" // Changed: 'to' to 'href'
+            href="/book" 
             className="bg-teal-600 text-white px-10 py-4 rounded-lg text-lg font-semibold hover:bg-teal-700 transition shadow-lg hover:shadow-xl"
           >
             Book an Appointment Now

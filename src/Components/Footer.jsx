@@ -1,6 +1,11 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
+import ContactOverlay from './ContactOverlay';
 
 const Footer = () => {
+  const [isContactOpen, setIsContactOpen] = useState(false);
   return (
     <footer className="bg-gray-100 text-gray-800 py-10 border-t border-gray-200">
       <div className="container mx-auto px-4">
@@ -33,9 +38,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/ContactUs" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <button
+                  onClick={() => setIsContactOpen(true)}
+                  className="text-gray-600 hover:text-blue-600 transition-colors"
+                >
                   Contact Us
-                </Link>
+                </button>
               </li>
             </ul>
           </div>
@@ -120,6 +128,12 @@ const Footer = () => {
           <p>&copy; {new Date().getFullYear()} PhysioGo. All rights reserved.</p>
         </div>
       </div>
+
+      {/* Contact Overlay */}
+      <ContactOverlay
+        isOpen={isContactOpen}
+        onClose={() => setIsContactOpen(false)}
+      />
     </footer>
   );
 };
