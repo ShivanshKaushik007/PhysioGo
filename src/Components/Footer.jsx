@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-blue-600">PhysioGo</h3>
+            <img src='./logo.png' className='h-12 pb-3' />
             <p className="text-gray-600 mb-4">
               Your trusted platform for finding the right physiotherapist and managing your health journey.
             </p>

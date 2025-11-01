@@ -18,7 +18,21 @@ function BookYourPhysio() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    
+    // Create a dummy appointment ID for this example
+    const appointmentId = Math.random().toString(36).substr(2, 9);
+    
+    // Redirect to payment page with appointment details
+    const searchParams = new URLSearchParams({
+      appointmentId: appointmentId,
+      amount: '50', // Example: $50 consultation fee
+      date: formData.date,
+      time: formData.time,
+      physiotherapistId: 'default', // You can update this based on selected physiotherapist
+    });
+
+    console.log('Redirecting to payment with params:', Object.fromEntries(searchParams));
+    window.location.href = `/payment?${searchParams.toString()}`;
   };
 
   if (submitted) {
