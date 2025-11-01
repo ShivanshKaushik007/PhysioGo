@@ -1,6 +1,7 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
-import Navbar from "@/Components/Navbar"; // Make sure this path is correct
+import Navbar from "@/Components/Navbar";
+import Footer from "@/Components/Footer";
 
 export const metadata = {
   title: "PhysioGo",
@@ -14,7 +15,8 @@ export default function RootLayout({ children }) {
         <body>
           <div className="min-h-screen flex flex-col">
             <Navbar />
-            <main className="flex-grow">{children}</main>
+            <main className="grow">{children}</main>
+            <Footer />
           </div>
         </body>
       </html>

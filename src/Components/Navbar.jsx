@@ -39,7 +39,7 @@ export default function Navbar() {
           <NavLink href="/book">Book Your Physio</NavLink>
           <NavLink href="/AiMatcher">Ai Matcher</NavLink>
           <NavLink href="/FindAPhysio">Find A Physio</NavLink>
-          <NavLink href="/ContactUs">Contact</NavLink>
+          
 
           <SignedOut>
             <SignInButton mode="modal">
