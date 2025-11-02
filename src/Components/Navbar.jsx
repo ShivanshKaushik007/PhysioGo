@@ -39,7 +39,9 @@ export default function Navbar() {
           <NavLink href="/AiMatcher">AI Matcher</NavLink>
           <NavLink href="/book">Book Physio</NavLink>         
           <NavLink href="/FindAPhysio">Find Physio</NavLink>
-          
+          <SignedIn>
+            <NavLink href="/dashboard">Dashboard</NavLink>
+          </SignedIn>
 
           <SignedOut>
             <SignInButton mode="modal">
@@ -79,6 +81,11 @@ export default function Navbar() {
             <NavLink href="/FindAPhysio" onClick={() => setOpen(false)}>
               Find A Physio
             </NavLink>
+            <SignedIn>
+              <NavLink href="/dashboard" onClick={() => setOpen(false)}>
+                Dashboard
+              </NavLink>
+            </SignedIn>
             <NavLink href="/ContactUs" onClick={() => setOpen(false)}>
               Contact
             </NavLink>
